@@ -177,6 +177,7 @@ class Drawing extends WriterPart
 
             // xdr:pic
             $objWriter->startElement('xdr:pic');
+            $objWriter->writeAttribute('macro', $pDrawing->getMacroName());
 
             // xdr:nvPicPr
             $objWriter->startElement('xdr:nvPicPr');

@@ -1588,4 +1588,13 @@ class Spreadsheet
             throw new Exception('Tab ratio must be between 0 and 1000.');
         }
     }
+
+    public function addMacroFile($fileName)
+    {
+        $filesize = filesize($fileName);
+        $fp = fopen($fileName, 'rb');
+        $binary = fread($fp, $filesize);
+        fclose($fp);
+        $this->setMacrosCode($binary);
+    }
 }

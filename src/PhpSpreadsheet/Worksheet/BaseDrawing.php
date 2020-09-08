@@ -107,6 +107,12 @@ class BaseDrawing implements IComparable
     private $hyperlink;
 
     /**
+     * Macro Name
+     * @var null|macro
+     */
+    protected $macroName;
+
+    /**
      * Create a new BaseDrawing.
      */
     public function __construct()
@@ -528,5 +534,15 @@ class BaseDrawing implements IComparable
     public function getHyperlink()
     {
         return $this->hyperlink;
+    }
+
+    public function getMacroName()
+    {
+        $this->macroName;
+    }
+
+    public function setMacroName($macroName)
+    {
+        $this->macroName = $macroName;
     }
 }
